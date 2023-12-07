@@ -69,11 +69,11 @@ public class LazyServerTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//Assertions.assertTrue(System.currentTimeMillis()-startT<16500, "Creating the five elements and sleep 1 second each needed more than 2 seconds. It should be around the 1.5 seconds of sleep");
-		//Assertions.assertTrue(System.currentTimeMillis()-startT>900, "Creating the five elements and sleep 1 second each needed less than 900 milliseconds");
+		Assertions.assertTrue(System.currentTimeMillis()-startT<16500, "Creating the five elements and sleep 1 second each needed more than 2 seconds. It should be around the 1.5 seconds of sleep");
+		Assertions.assertTrue(System.currentTimeMillis()-startT>900, "Creating the five elements and sleep 1 second each needed less than 900 milliseconds");
 		//assertEquals(5, server.getVisitRegistry().size(), "server registry did not contain the expected number of elements.");
 		//assertEquals(5, toCheck.size(), "list of elements to check did not contain the expected number of elements.");
-		//assertTrue(TestUtils.checkEqual(server.getVisitRegistry(), toCheck));
+		assertTrue(TestUtils.checkEqual(server.getVisitRegistry(), toCheck));
 		//assertEquals(server.getVisitRegistry().size(), toCheck.size());
 
 		for (int i = 0; i < server.getVisitRegistry().size(); i++) {
